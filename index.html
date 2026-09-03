@@ -6,6 +6,8 @@
   <title>Panel de Datos: Búsqueda Efectiva de Información: Estrategias de Desarrollo Docente</title>
   <!-- Tailwind CSS via allowlisted CDN -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <!-- SheetJS para generación binaria nativa de archivos .xlsx -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   <style>
     :root {
       --iplacex-navy: #002B49;
@@ -588,13 +590,13 @@
 
   </div>
 
-  <!-- SCRIPT DATA & EXCEL EXPORT (EXCEL COMPATIBLE CON ESTILOS E HTML WORKBOOK CON EXTENSIÓN .XLS) -->
+  <!-- SCRIPT DATA & EXCEL EXPORT (GENERACIÓN BINARIA NATIVA NATIVA EN FORMATO .XLSX VÍA SHEETJS) -->
   <script>
     const surveyData = [
       { docente_id: "Docente #01", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "La verdad fue excelente...Me falta tiempo", q7: "<Sin contestar>", promedio: 5.0 },
       { docente_id: "Docente #02", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Sin observaciones.", q7: "Uso práctico y aplicativo de IA en educación, desarrollado en profundidad y con foco pedagógico en metodologías.", promedio: 5.0 },
       { docente_id: "Docente #03", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "está bien", q7: "temas de salud mental y cómo escribir textos (o cosas similares)", promedio: 5.0 },
-      { docente_id: "Docente #04", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Los horarios de acceso", q7: "Mayor opportunity de opinión", promedio: 5.0 },
+      { docente_id: "Docente #04", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Los horarios de acceso", q7: "Mayor oportunidad de opinión", promedio: 5.0 },
       { docente_id: "Docente #05", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "El curso fue claro y pertinente. Como aspecto de mejora, sería interesante incorporar un poco más de tiempo para actividades prácticas y análisis de casos aplicados directamente a situaciones reales de docencia, de manera de profundizar aún más la transferencia de los contenidos al trabajo cotidiano con los estudiantes.", q7: "Me gustaría que en el futuro se offeredieran cursos relacionados con inteligencia artificial aplicada a la docencia, analítica de aprendizaje, uso de datos para la toma de decisiones educativas y estrategias de innovación docente en entornos virtuales.", promedio: 5.0 },
       { docente_id: "Docente #06", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "la posibilidad de interactuar tan amplia que existio", q7: "potenciar conocimientos de la carrera", promedio: 5.0 },
       { docente_id: "Docente #07", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Aunque considero que fue adecuado a nuestros tiempos, siempre será bienvenida una mayor ejercitación", q7: "Lograr mayor ejercitación para el uso y fortalecimiento de nuestra rol como docentes online", promedio: 5.0 },
@@ -630,93 +632,59 @@
     }
 
     function downloadXLSX() {
-      // EXPORTACIÓN EN FORMATO HTML WORKBOOK COMPATIBLE CON TODAS LAS VERSIONES DE MICROSOFT EXCEL (.XLS)
-      let html = '\uFEFF<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">\n';
-      html += '<head>\n';
-      html += '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n';
-      html += '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Resultados Encuesta</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->\n';
-      html += '<style>\n';
-      html += '  th { background-color: #002B49; color: #FFFFFF; font-weight: bold; border: 1px solid #CBD5E1; padding: 8px; text-align: center; }\n';
-      html += '  td { border: 1px solid #E2E8F0; padding: 6px; vertical-align: middle; }\n';
-      html += '  .kpi-hdr { background-color: #0077C8; color: #FFFFFF; font-weight: bold; text-align: center; }\n';
-      html += '  .kpi-val { background-color: #F1F5F9; color: #002B49; font-weight: bold; text-align: center; font-size: 13px; }\n';
-      html += '  .num { text-align: center; font-weight: bold; }\n';
-      html += '  .even { background-color: #FFFFFF; }\n';
-      html += '  .odd { background-color: #F8FAFC; }\n';
-      html += '</style>\n';
-      html += '</head>\n';
-      html += '<body>\n';
-      html += '<h2 style="color: #002B49;">INSTITUTO PROFESIONAL IPLACEX - BIBLIOTECA DIGITAL</h2>\n';
-      html += '<h3 style="color: #475569;">Reporte de Evaluación: Búsqueda Efectiva de Información - Estrategias de Desarrollo Docente</h3>\n';
-      html += '<br>\n';
-      
-      // Tabla Resumen KPI
-      html += '<table>\n';
-      html += '  <tr>\n';
-      html += '    <th class="kpi-hdr">Docentes Evaluados</th>\n';
-      html += '    <th class="kpi-hdr">Docentes Aprobados</th>\n';
-      html += '    <th class="kpi-hdr">Encuestas Respondidas</th>\n';
-      html += '    <th class="kpi-hdr">Promedio General</th>\n';
-      html += '    <th class="kpi-hdr">Satisfacción CSAT</th>\n';
-      html += '  </tr>\n';
-      html += '  <tr>\n';
-      html += '    <td class="kpi-val">45</td>\n';
-      html += '    <td class="kpi-val">35 (77.8%)</td>\n';
-      html += '    <td class="kpi-val">28</td>\n';
-      html += '    <td class="kpi-val">4.93</td>\n';
-      html += '    <td class="kpi-val">96.4%</td>\n';
-      html += '  </tr>\n';
-      html += '</table>\n';
-      html += '<br><br>\n';
-
-      // Tabla Principal de Encuestas
-      html += '<table>\n';
-      html += '  <thead>\n';
-      html += '    <tr>\n';
-      html += '      <th>ID Docente</th>\n';
-      html += '      <th>Q1 Habilidades</th>\n';
-      html += '      <th>Q2 Pertinencia</th>\n';
-      html += '      <th>Q3 Actividades</th>\n';
-      html += '      <th>Q4 Relator</th>\n';
-      html += '      <th>Q5 Cursos Futuros</th>\n';
-      html += '      <th>Promedio General</th>\n';
-      html += '      <th>Q6 Aspectos a Mejorar</th>\n';
-      html += '      <th>Q7 Futuros Cursos Deseados</th>\n';
-      html += '    </tr>\n';
-      html += '  </thead>\n';
-      html += '  <tbody>\n';
-
-      surveyData.forEach((d, idx) => {
-        const rowClass = idx % 2 === 0 ? "even" : "odd";
-        const q6Escaped = String(d.q6).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-        const q7Escaped = String(d.q7).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      if (typeof XLSX !== 'undefined') {
+        // Construcción de la hoja en formato nativo binario .xlsx usando SheetJS
+        const kpiHeader = ["Docentes Evaluados", "Docentes Aprobados", "Encuestas Respondidas", "Promedio General", "Satisfacción CSAT"];
+        const kpiValues = [45, "35 (77.8%)", 28, 4.93, "96.4%"];
+        const tableHeaders = ["ID Docente", "Q1 Habilidades", "Q2 Pertinencia", "Q3 Actividades", "Q4 Relator", "Q5 Cursos Futuros", "Promedio General", "Q6 Aspectos a Mejorar", "Q7 Futuros Cursos Deseados"];
         
-        html += `    <tr class="${rowClass}">\n`;
-        html += `      <td class="num">${d.docente_id}</td>\n`;
-        html += `      <td class="num">${d.q1}</td>\n`;
-        html += `      <td class="num">${d.q2}</td>\n`;
-        html += `      <td class="num">${d.q3}</td>\n`;
-        html += `      <td class="num">${d.q4}</td>\n`;
-        html += `      <td class="num">${d.q5}</td>\n`;
-        html += `      <td class="num">${d.promedio.toFixed(2)}</td>\n`;
-        html += `      <td>${q6Escaped}</td>\n`;
-        html += `      <td>${q7Escaped}</td>\n`;
-        html += '    </tr>\n';
-      });
+        const sheetRows = [
+          ["INSTITUTO PROFESIONAL IPLACEX - BIBLIOTECA DIGITAL"],
+          ["Reporte de Evaluación: Búsqueda Efectiva de Información - Estrategias de Desarrollo Docente"],
+          [],
+          kpiHeader,
+          kpiValues,
+          [],
+          tableHeaders
+        ];
 
-      html += '  </tbody>\n';
-      html += '</table>\n';
-      html += '</body>\n';
-      html += '</html>';
+        surveyData.forEach(d => {
+          sheetRows.push([
+            d.docente_id,
+            d.q1,
+            d.q2,
+            d.q3,
+            d.q4,
+            d.q5,
+            Number(d.promedio.toFixed(2)),
+            d.q6,
+            d.q7
+          ]);
+        });
 
-      const blob = new Blob([html], { type: 'application/vnd.ms-excel;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.setAttribute("href", url);
-      link.setAttribute("download", "Resultados_Encuesta_Busqueda_Informacion_IPLACEX.xls");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+        const ws = XLSX.utils.aoa_to_sheet(sheetRows);
+
+        // Anchos de columna automáticos
+        ws['!cols'] = [
+          { wch: 15 },
+          { wch: 16 },
+          { wch: 16 },
+          { wch: 16 },
+          { wch: 16 },
+          { wch: 16 },
+          { wch: 18 },
+          { wch: 55 },
+          { wch: 55 }
+        ];
+
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Resultados Encuesta");
+
+        // Genera el archivo BINARIO NATIVO .XLSX directo
+        XLSX.writeFile(wb, "Resultados_Encuesta_Busqueda_Informacion_IPLACEX.xlsx");
+      } else {
+        alert("La librería de exportación se está cargando. Por favor, intenta de nuevo en un segundo.");
+      }
     }
   </script>
 </body>
