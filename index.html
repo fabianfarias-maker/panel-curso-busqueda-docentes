@@ -199,7 +199,7 @@
         </div>
       </div>
 
-      <!-- GRÁFICO 2: INDICADORES DE LOGRO -->
+      <!-- GRÁFICO 2: INDICADORES DE LOGRO (DONAS CENTRADAS) -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
         <h3 class="text-base font-bold text-[#002B49] text-center md:text-left">Indicadores de Logro</h3>
 
@@ -588,13 +588,13 @@
 
   </div>
 
-  <!-- SCRIPT DATA & EXCEL EXPORT -->
+  <!-- SCRIPT DATA & EXCEL EXPORT (EXCEL COMPATIBLE CON ESTILOS E HTML WORKBOOK CON EXTENSIÓN .XLS) -->
   <script>
     const surveyData = [
       { docente_id: "Docente #01", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "La verdad fue excelente...Me falta tiempo", q7: "<Sin contestar>", promedio: 5.0 },
       { docente_id: "Docente #02", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Sin observaciones.", q7: "Uso práctico y aplicativo de IA en educación, desarrollado en profundidad y con foco pedagógico en metodologías.", promedio: 5.0 },
       { docente_id: "Docente #03", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "está bien", q7: "temas de salud mental y cómo escribir textos (o cosas similares)", promedio: 5.0 },
-      { docente_id: "Docente #04", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Los horarios de acceso", q7: "Mayor oportunidad de opinión", promedio: 5.0 },
+      { docente_id: "Docente #04", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Los horarios de acceso", q7: "Mayor opportunity de opinión", promedio: 5.0 },
       { docente_id: "Docente #05", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "El curso fue claro y pertinente. Como aspecto de mejora, sería interesante incorporar un poco más de tiempo para actividades prácticas y análisis de casos aplicados directamente a situaciones reales de docencia, de manera de profundizar aún más la transferencia de los contenidos al trabajo cotidiano con los estudiantes.", q7: "Me gustaría que en el futuro se offeredieran cursos relacionados con inteligencia artificial aplicada a la docencia, analítica de aprendizaje, uso de datos para la toma de decisiones educativas y estrategias de innovación docente en entornos virtuales.", promedio: 5.0 },
       { docente_id: "Docente #06", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "la posibilidad de interactuar tan amplia que existio", q7: "potenciar conocimientos de la carrera", promedio: 5.0 },
       { docente_id: "Docente #07", q1: 5, q2: 5, q3: 5, q4: 5, q5: 5, q6: "Aunque considero que fue adecuado a nuestros tiempos, siempre será bienvenida una mayor ejercitación", q7: "Lograr mayor ejercitación para el uso y fortalecimiento de nuestra rol como docentes online", promedio: 5.0 },
@@ -630,92 +630,90 @@
     }
 
     function downloadXLSX() {
-      const headers = ["ID Docente", "Q1 Habilidades", "Q2 Pertinencia", "Q3 Actividades", "Q4 Relator", "Q5 Cursos Futuros", "Promedio General", "Q6 Aspectos a Mejorar", "Q7 Futuros Cursos Deseados"];
+      // EXPORTACIÓN EN FORMATO HTML WORKBOOK COMPATIBLE CON TODAS LAS VERSIONES DE MICROSOFT EXCEL (.XLS)
+      let html = '\uFEFF<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">\n';
+      html += '<head>\n';
+      html += '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n';
+      html += '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Resultados Encuesta</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->\n';
+      html += '<style>\n';
+      html += '  th { background-color: #002B49; color: #FFFFFF; font-weight: bold; border: 1px solid #CBD5E1; padding: 8px; text-align: center; }\n';
+      html += '  td { border: 1px solid #E2E8F0; padding: 6px; vertical-align: middle; }\n';
+      html += '  .kpi-hdr { background-color: #0077C8; color: #FFFFFF; font-weight: bold; text-align: center; }\n';
+      html += '  .kpi-val { background-color: #F1F5F9; color: #002B49; font-weight: bold; text-align: center; font-size: 13px; }\n';
+      html += '  .num { text-align: center; font-weight: bold; }\n';
+      html += '  .even { background-color: #FFFFFF; }\n';
+      html += '  .odd { background-color: #F8FAFC; }\n';
+      html += '</style>\n';
+      html += '</head>\n';
+      html += '<body>\n';
+      html += '<h2 style="color: #002B49;">INSTITUTO PROFESIONAL IPLACEX - BIBLIOTECA DIGITAL</h2>\n';
+      html += '<h3 style="color: #475569;">Reporte de Evaluación: Búsqueda Efectiva de Información - Estrategias de Desarrollo Docente</h3>\n';
+      html += '<br>\n';
       
-      let xml = '<?xml version="1.0"?><?mso-application progid="Excel.Sheet"?>\n';
-      xml += '<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">\n';
-      
-      xml += ' <Styles>\n';
-      xml += '  <Style ss:ID="TitleStyle"><Font ss:Bold="1" ss:Size="14" ss:Color="#002B49"/><Alignment ss:Horizontal="Left" ss:Vertical="Center"/></Style>\n';
-      xml += '  <Style ss:ID="SubtitleStyle"><Font ss:Italic="1" ss:Size="10" ss:Color="#475569"/><Alignment ss:Horizontal="Left" ss:Vertical="Center"/></Style>\n';
-      xml += '  <Style ss:ID="KpiHeader"><Font ss:Bold="1" ss:Size="9" ss:Color="#FFFFFF"/><Interior ss:Color="#0077C8" ss:Pattern="Solid"/><Alignment ss:Horizontal="Center" ss:Vertical="Center"/></Style>\n';
-      xml += '  <Style ss:ID="KpiValue"><Font ss:Bold="1" ss:Size="11" ss:Color="#002B49"/><Interior ss:Color="#F1F5F9" ss:Pattern="Solid"/><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CBD5E1"/></Borders></Style>\n';
-      xml += '  <Style ss:ID="TableHeader"><Font ss:Bold="1" ss:Size="10" ss:Color="#FFFFFF"/><Interior ss:Color="#002B49" ss:Pattern="Solid"/><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#00A3E0"/></Borders></Style>\n';
-      xml += '  <Style ss:ID="RowEven"><Font ss:Size="10"/><Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/><Alignment ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/></Borders></Style>\n';
-      xml += '  <Style ss:ID="RowOdd"><Font ss:Size="10"/><Interior ss:Color="#F8FAFC" ss:Pattern="Solid"/><Alignment ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/></Borders></Style>\n';
-      xml += '  <Style ss:ID="NumEven"><Font ss:Size="10" ss:Bold="1"/><Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/></Borders></Style>\n';
-      xml += '  <Style ss:ID="NumOdd"><Font ss:Size="10" ss:Bold="1"/><Interior ss:Color="#F8FAFC" ss:Pattern="Solid"/><Alignment ss:Horizontal="Center" ss:Vertical="Center"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E2E8F0"/></Borders></Style>\n';
-      xml += ' </Styles>\n';
-      
-      xml += ' <Worksheet ss:Name="Evaluación Docente IPLACEX">\n';
-      xml += '  <Table ss:DefaultRowHeight="20">\n';
-      xml += '   <Column ss:Width="100"/>\n';
-      xml += '   <Column ss:Width="85"/>\n';
-      xml += '   <Column ss:Width="85"/>\n';
-      xml += '   <Column ss:Width="85"/>\n';
-      xml += '   <Column ss:Width="85"/>\n';
-      xml += '   <Column ss:Width="85"/>\n';
-      xml += '   <Column ss:Width="100"/>\n';
-      xml += '   <Column ss:Width="300"/>\n';
-      xml += '   <Column ss:Width="300"/>\n';
-      
-      xml += '   <Row ss:Height="25"><Cell ss:StyleID="TitleStyle"><Data ss:Type="String">INSTITUTO PROFESIONAL IPLACEX - BIBLIOTECA DIGITAL</Data></Cell></Row>\n';
-      xml += '   <Row ss:Height="20"><Cell ss:StyleID="SubtitleStyle"><Data ss:Type="String">Reporte de Evaluación: Búsqueda Efectiva de Información - Estrategias de Desarrollo Docente</Data></Cell></Row>\n';
-      xml += '   <Row ss:Height="10"></Row>\n';
-      
-      xml += '   <Row ss:Height="22">\n';
-      xml += '    <Cell ss:StyleID="KpiHeader"><Data ss:Type="String">Docentes Evaluados</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiHeader"><Data ss:Type="String">Docentes Aprobados</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiHeader"><Data ss:Type="String">Encuestas Respondidas</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiHeader"><Data ss:Type="String">Promedio General</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiHeader"><Data ss:Type="String">Satisfacción CSAT</Data></Cell>\n';
-      xml += '   </Row>\n';
-      xml += '   <Row ss:Height="24">\n';
-      xml += '    <Cell ss:StyleID="KpiValue"><Data ss:Type="Number">45</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiValue"><Data ss:Type="String">35 (77.8%)</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiValue"><Data ss:Type="Number">28</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiValue"><Data ss:Type="Number">4.93</Data></Cell>\n';
-      xml += '    <Cell ss:StyleID="KpiValue"><Data ss:Type="String">96.4%</Data></Cell>\n';
-      xml += '   </Row>\n';
-      xml += '   <Row ss:Height="15"></Row>\n';
+      // Tabla Resumen KPI
+      html += '<table>\n';
+      html += '  <tr>\n';
+      html += '    <th class="kpi-hdr">Docentes Evaluados</th>\n';
+      html += '    <th class="kpi-hdr">Docentes Aprobados</th>\n';
+      html += '    <th class="kpi-hdr">Encuestas Respondidas</th>\n';
+      html += '    <th class="kpi-hdr">Promedio General</th>\n';
+      html += '    <th class="kpi-hdr">Satisfacción CSAT</th>\n';
+      html += '  </tr>\n';
+      html += '  <tr>\n';
+      html += '    <td class="kpi-val">45</td>\n';
+      html += '    <td class="kpi-val">35 (77.8%)</td>\n';
+      html += '    <td class="kpi-val">28</td>\n';
+      html += '    <td class="kpi-val">4.93</td>\n';
+      html += '    <td class="kpi-val">96.4%</td>\n';
+      html += '  </tr>\n';
+      html += '</table>\n';
+      html += '<br><br>\n';
 
-      xml += '   <Row ss:Height="25">\n';
-      headers.forEach(h => {
-        xml += `    <Cell ss:StyleID="TableHeader"><Data ss:Type="String">${h}</Data></Cell>\n`;
-      });
-      xml += '   </Row>\n';
+      // Tabla Principal de Encuestas
+      html += '<table>\n';
+      html += '  <thead>\n';
+      html += '    <tr>\n';
+      html += '      <th>ID Docente</th>\n';
+      html += '      <th>Q1 Habilidades</th>\n';
+      html += '      <th>Q2 Pertinencia</th>\n';
+      html += '      <th>Q3 Actividades</th>\n';
+      html += '      <th>Q4 Relator</th>\n';
+      html += '      <th>Q5 Cursos Futuros</th>\n';
+      html += '      <th>Promedio General</th>\n';
+      html += '      <th>Q6 Aspectos a Mejorar</th>\n';
+      html += '      <th>Q7 Futuros Cursos Deseados</th>\n';
+      html += '    </tr>\n';
+      html += '  </thead>\n';
+      html += '  <tbody>\n';
 
       surveyData.forEach((d, idx) => {
-        const isEven = idx % 2 === 0;
-        const rowStyle = isEven ? "RowEven" : "RowOdd";
-        const numStyle = isEven ? "NumEven" : "NumOdd";
-
-        xml += '   <Row ss:Height="22">\n';
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="String">${d.docente_id}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.q1}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.q2}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.q3}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.q4}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.q5}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${numStyle}"><Data ss:Type="Number">${d.promedio.toFixed(2)}</Data></Cell>\n`;
-        
+        const rowClass = idx % 2 === 0 ? "even" : "odd";
         const q6Escaped = String(d.q6).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         const q7Escaped = String(d.q7).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         
-        xml += `    <Cell ss:StyleID="${rowStyle}"><Data ss:Type="String">${q6Escaped}</Data></Cell>\n`;
-        xml += `    <Cell ss:StyleID="${rowStyle}"><Data ss:Type="String">${q7Escaped}</Data></Cell>\n`;
-        xml += '   </Row>\n';
+        html += `    <tr class="${rowClass}">\n`;
+        html += `      <td class="num">${d.docente_id}</td>\n`;
+        html += `      <td class="num">${d.q1}</td>\n`;
+        html += `      <td class="num">${d.q2}</td>\n`;
+        html += `      <td class="num">${d.q3}</td>\n`;
+        html += `      <td class="num">${d.q4}</td>\n`;
+        html += `      <td class="num">${d.q5}</td>\n`;
+        html += `      <td class="num">${d.promedio.toFixed(2)}</td>\n`;
+        html += `      <td>${q6Escaped}</td>\n`;
+        html += `      <td>${q7Escaped}</td>\n`;
+        html += '    </tr>\n';
       });
 
-      xml += '  </Table>\n';
-      xml += ' </Worksheet>\n';
-      xml += '</Workbook>';
+      html += '  </tbody>\n';
+      html += '</table>\n';
+      html += '</body>\n';
+      html += '</html>';
 
-      const blob = new Blob([xml], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8' });
+      const blob = new Blob([html], { type: 'application/vnd.ms-excel;charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.setAttribute("href", url);
-      link.setAttribute("download", "Resultados_Encuesta_Busqueda_Informacion_IPLACEX.xlsx");
+      link.setAttribute("download", "Resultados_Encuesta_Busqueda_Informacion_IPLACEX.xls");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
