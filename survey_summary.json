@@ -1,0 +1,377 @@
+{
+  "total_respuestas": 28,
+  "promedio_general": 4.93,
+  "satisfaccion_global_csat": 96.4,
+  "preguntas_likert": {
+    "q1": {
+      "title": "Fortalecimiento de Habilidades de Búsqueda",
+      "average": 4.96,
+      "csat": 100.0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 27
+      }
+    },
+    "q2": {
+      "title": "Pertinencia y Utilidad de Contenidos",
+      "average": 4.93,
+      "csat": 100.0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 2,
+        "5": 26
+      }
+    },
+    "q3": {
+      "title": "Actividades, Demostraciones y Foros",
+      "average": 4.89,
+      "csat": 100.0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3,
+        "5": 25
+      }
+    },
+    "q4": {
+      "title": "Dominio y Desempeño del Relator",
+      "average": 4.96,
+      "csat": 100.0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 27
+      }
+    },
+    "q5": {
+      "title": "Interés en Futuros Cursos de Biblioteca Digital",
+      "average": 4.89,
+      "csat": 96.4,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 26
+      }
+    }
+  },
+  "docentes": [
+    {
+      "docente_id": "Docente #01",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "La verdad fue excelente...Me falta tiempo",
+      "q7": "<Sin contestar>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #02",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Sin observaciones.",
+      "q7": "Uso práctico y aplicativo de IA en educación, desarrollado en profundidad y con foco pedagógico en metodologías.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #03",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "está bien",
+      "q7": "temas de salud mental y cómo escribir textos (o cosas similares)",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #04",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Los horarios de acceso",
+      "q7": "Mayor oportunidad de opinión",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #05",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "El curso fue claro y pertinente. Como aspecto de mejora, sería interesante incorporar un poco más de tiempo para actividades prácticas y análisis de casos aplicados directamente a situaciones reales de docencia, de manera de profundizar aún más la transferencia de los contenidos al trabajo cotidiano con los estudiantes.",
+      "q7": "Me gustaría que en el futuro se ofrecieran cursos relacionados con inteligencia artificial aplicada a la docencia, analítica de aprendizaje, uso de datos para la toma de decisiones educativas y estrategias de innovación docente en entornos virtuales.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #06",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "la posibilidad de interactuar tan amplia que existio",
+      "q7": "potenciar conocimientos de la carrera",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #07",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Aunque considero que fue adecuado a nuestros tiempos, siempre será bienvenida una mayor ejercitación",
+      "q7": "Lograr mayor ejercitación para el uso y fortalecimiento de nuestra rol como docentes online",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #08",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "<Sin contestar>",
+      "q7": "<Sin contestar>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #09",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Otorgar mayor tiempo a explicar las actividades del curso.",
+      "q7": "Nuevas plataformas para generar recursos para docentes.Como motivar a la clase sin ser un payaso.Literatura imperdible antes de morir<br>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #10",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "De momento considero que estuvo todo al 100%",
+      "q7": "Herramientas para la metodología de investigación",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #11",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "-",
+      "q7": "Formas de evaluación para asignaturas asincrónicasDetección de inteligencia artificial en talleres evaluados",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #12",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "El curso estuvo muy didáctico, bien explicado y el relator un 7. Sin embargo, encuentro que fue muy poco tiempo el empleado a la IA que es lo que hoy más se está usando.",
+      "q7": "Cursos de IA sería genial",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #13",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "En general este Curso me pareció todo bien, buena temática, buen relator, bien el tiempo para las actividades.100% el curso",
+      "q7": "Metodologías de enseñanza con IA para estudiantes de Educación Superior",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #14",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Todo me pareció excelente.",
+      "q7": "<Sin contestar>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #15",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": ".",
+      "q7": ".",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #16",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Simplemente tiene que ver con el horario de realización del curso, el cual puede ser menor, aumentando el número de sesiones, con el objeto de tener mayor concentración en los contenidos que se exponen.",
+      "q7": "Una profundización de la utilización de inteligencia artificial en el desarrollo docente.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #17",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "extender el horario de las clases de 7 a 9.30 o que las clases se aumenten en un día más, para profundizar un poco más el contenido.",
+      "q7": "estos cursos deberían ser impartidos desde el inicio como docentes de Iplacex, ya que ayudaría de manera temprana a descubrir y conocer las herramientas que se encuentran en la plataforma del instituto.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #18",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "<Sin contestar>",
+      "q7": "cursos con mayor detalle respecto de IA",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #19",
+      "q1": 5,
+      "q2": 5,
+      "q3": 4,
+      "q4": 5,
+      "q5": 5,
+      "q6": "En general estuvo muy bueno el curso, entretenido e interesante a pesar del cansancio.Yo le agregaría más actividades prácticas y tal vez reduciría información. No bajar la calidad académica, pero priorizar en la aplicación.El profesor demostró excelente disposición, dominio del tema e interés por sus alumnos.",
+      "q7": "Norma APARecursos interactivos",
+      "promedio": 4.8
+    },
+    {
+      "docente_id": "Docente #20",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Nada, el curso fue perfecto",
+      "q7": "Creo que abordó todos los contenidos relacionados al tema",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #21",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "<Sin contestar>",
+      "q7": "<Sin contestar>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #22",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Me pareció excelente, pero me encantaría nos mantengan actualizados, ya que esto evoluciona muy rápido.",
+      "q7": "Como usar la I.A. sin morir en el intento",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #23",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Adquiri una inteligencia artificial seria que nos ayude en nuestro desarrollo diario.",
+      "q7": "Temas netamente técnicos, como por ejemplo: Software que sean didácticos y amigables para enseñar a nuestros educandos. LAB - VOLT.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #24",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Excelente dominio de parte del Docente Luis Farias.<br><br>",
+      "q7": "Me gustaría que se ofrecieran cursos sobre analítica del aprendizaje y seguimiento del progreso de estudiantes en entornos virtuales, para identificar tempranamente dificultades, riesgo de deserción y oportunidades de apoyo.",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #25",
+      "q1": 5,
+      "q2": 5,
+      "q3": 4,
+      "q4": 5,
+      "q5": 4,
+      "q6": "Sentí que el curso iba rápido en términos de entrega de la información en las clases. Se entiende que es breve, pero por el tema, que resulta ser muy interesante y útil, se podrían entregar mayores conocimientos.Agradecer a Luis por haber dictaminado el curso, se nota que maneja los contenidos y también fue muy cercano con los participantes, respondiendo dudas y también interactuando a través de otros recursos para fomentar la motivación.",
+      "q7": "Uso de IA en revisión de trabajos, tips o consejos para manejar nivel básico de IA en el apoyo pedagógico",
+      "promedio": 4.6
+    },
+    {
+      "docente_id": "Docente #26",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "<Sin contestar>",
+      "q7": "<Sin contestar>",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #27",
+      "q1": 5,
+      "q2": 4,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "El poder realizar actividades prácticas durante la relatoría",
+      "q7": ".",
+      "promedio": 4.8
+    },
+    {
+      "docente_id": "Docente #28",
+      "q1": 4,
+      "q2": 4,
+      "q3": 4,
+      "q4": 4,
+      "q5": 3,
+      "q6": "<Sin contestar>",
+      "q7": "<Sin contestar>",
+      "promedio": 3.8
+    }
+  ]
+}
