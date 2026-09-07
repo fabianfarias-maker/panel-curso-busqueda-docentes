@@ -1,70 +1,39 @@
 {
-  "total_respuestas": 28,
+  "participantes_totales": 48,
+  "aprobados_totales": 36,
+  "encuestados_totales": 30,
+  "tasa_aprobacion_pct": 75.0,
+  "tasa_respuesta_pct": 83.3,
   "promedio_general": 4.93,
-  "satisfaccion_global_csat": 96.4,
-  "preguntas_likert": {
-    "q1": {
-      "title": "Fortalecimiento de Habilidades de Búsqueda",
-      "average": 4.96,
-      "csat": 100.0,
-      "distribution": {
-        "1": 0,
-        "2": 0,
-        "3": 0,
-        "4": 1,
-        "5": 27
-      }
-    },
-    "q2": {
-      "title": "Pertinencia y Utilidad de Contenidos",
-      "average": 4.93,
-      "csat": 100.0,
-      "distribution": {
-        "1": 0,
-        "2": 0,
-        "3": 0,
-        "4": 2,
-        "5": 26
-      }
-    },
-    "q3": {
-      "title": "Actividades, Demostraciones y Foros",
-      "average": 4.89,
-      "csat": 100.0,
-      "distribution": {
-        "1": 0,
-        "2": 0,
-        "3": 0,
-        "4": 3,
-        "5": 25
-      }
-    },
-    "q4": {
-      "title": "Dominio y Desempeño del Relator",
-      "average": 4.96,
-      "csat": 100.0,
-      "distribution": {
-        "1": 0,
-        "2": 0,
-        "3": 0,
-        "4": 1,
-        "5": 27
-      }
-    },
-    "q5": {
-      "title": "Interés en Futuros Cursos de Biblioteca Digital",
-      "average": 4.89,
-      "csat": 96.4,
-      "distribution": {
-        "1": 0,
-        "2": 0,
-        "3": 1,
-        "4": 1,
-        "5": 26
-      }
-    }
+  "evaluacion_relator": 4.93,
+  "csat_pct": 90.0,
+  "q1_avg": 4.97,
+  "q2_avg": 4.93,
+  "q3_avg": 4.93,
+  "q4_avg": 4.93,
+  "q5_avg": 4.9,
+  "q1_counts": {
+    "5": 29,
+    "4": 1
   },
-  "docentes": [
+  "q2_counts": {
+    "5": 28,
+    "4": 2
+  },
+  "q3_counts": {
+    "5": 28,
+    "4": 2
+  },
+  "q4_counts": {
+    "5": 28,
+    "4": 2
+  },
+  "q5_counts": {
+    "5": 28,
+    "4": 1,
+    "3": 1
+  },
+  "responses": [
     {
       "docente_id": "Docente #01",
       "q1": 5,
@@ -193,12 +162,23 @@
       "q3": 5,
       "q4": 5,
       "q5": 5,
+      "q6": "mayor tiempo de clases y mas material de apoyo",
+      "q7": "uso de plataformas digitales para fortalecer e innovar en docencia",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #13",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
       "q6": "El curso estuvo muy didáctico, bien explicado y el relator un 7. Sin embargo, encuentro que fue muy poco tiempo el empleado a la IA que es lo que hoy más se está usando.",
       "q7": "Cursos de IA sería genial",
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #13",
+      "docente_id": "Docente #14",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -209,7 +189,18 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #14",
+      "docente_id": "Docente #15",
+      "q1": 5,
+      "q2": 5,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": "Dar más opciones de horario para las clases sincrónicas o sin requisito de asistencia",
+      "q7": "Desarrollo de habilidades de estudio, funciones ejecutivas, estrategias de estudio",
+      "promedio": 5.0
+    },
+    {
+      "docente_id": "Docente #16",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -220,7 +211,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #15",
+      "docente_id": "Docente #17",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -231,7 +222,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #16",
+      "docente_id": "Docente #18",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -242,7 +233,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #17",
+      "docente_id": "Docente #19",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -253,7 +244,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #18",
+      "docente_id": "Docente #20",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -264,18 +255,18 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #19",
+      "docente_id": "Docente #21",
       "q1": 5,
       "q2": 5,
-      "q3": 4,
-      "q4": 5,
+      "q3": 5,
+      "q4": 4,
       "q5": 5,
       "q6": "En general estuvo muy bueno el curso, entretenido e interesante a pesar del cansancio.Yo le agregaría más actividades prácticas y tal vez reduciría información. No bajar la calidad académica, pero priorizar en la aplicación.El profesor demostró excelente disposición, dominio del tema e interés por sus alumnos.",
       "q7": "Norma APARecursos interactivos",
       "promedio": 4.8
     },
     {
-      "docente_id": "Docente #20",
+      "docente_id": "Docente #22",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -286,7 +277,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #21",
+      "docente_id": "Docente #23",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -297,7 +288,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #22",
+      "docente_id": "Docente #24",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -308,7 +299,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #23",
+      "docente_id": "Docente #25",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -319,7 +310,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #24",
+      "docente_id": "Docente #26",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -330,7 +321,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #25",
+      "docente_id": "Docente #27",
       "q1": 5,
       "q2": 5,
       "q3": 4,
@@ -341,7 +332,7 @@
       "promedio": 4.6
     },
     {
-      "docente_id": "Docente #26",
+      "docente_id": "Docente #28",
       "q1": 5,
       "q2": 5,
       "q3": 5,
@@ -352,7 +343,7 @@
       "promedio": 5.0
     },
     {
-      "docente_id": "Docente #27",
+      "docente_id": "Docente #29",
       "q1": 5,
       "q2": 4,
       "q3": 5,
@@ -363,7 +354,7 @@
       "promedio": 4.8
     },
     {
-      "docente_id": "Docente #28",
+      "docente_id": "Docente #30",
       "q1": 4,
       "q2": 4,
       "q3": 4,
